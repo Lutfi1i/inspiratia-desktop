@@ -17,7 +17,7 @@ export default function Navbar() {
           font-bold ml-2 drop-shadow-md">Inspiratia</h1>
         </div>
         <div className="flex gap-4">
-          <button className="bg-white/60 text-black font-medium  w-[406px] h-[40px] flex items-center justify-start rounded-lg drop-shadow-xl text-left pl-3 "><Icon icon="material-symbols:search-rounded" width="24" height="24" className="mr-2"/>Cari buku atau penulis...</button>
+          <button className="bg-white/60 text-[#808080] font-medium  w-[406px] h-[40px] flex items-center justify-start rounded-lg drop-shadow-xl text-left pl-3 "><Icon icon="material-symbols:search-rounded" width="24" height="24" className="mr-2"/>Cari buku atau penulis...</button>
           <div className="ml-5 flex gap-4">
           <button className="bg-[#2D6E50] text-white w-[114px] h-[38px] rounded-lg font-semibold drop-shadow-xl">Login</button>
           </div>
