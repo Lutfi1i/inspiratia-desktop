@@ -1,27 +1,49 @@
 import Image from "next/image";
+import { Poppins } from "next/font/google";
 import Navbar from "@/components/Navbar";
+
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+});
 
 export default function HeroSection() {
   return (
-  <>
-  <Navbar />
-  <section className="relative w-full min-h-screen flex items-center justify-center" style={{ backgroundColor: '#90C5AA' }}>
-      <div className="max-w-4xl text-center">
-        <h1 className="text-5xl font-bold text-white">
-          Where <span className="text-green-700">Stories</span> Come to Life
-        </h1>
-        <p className="text-lg text-white mt-4">
-          &quot;Buku Terbaik, Kapan Saja, Di Mana Saja&quot;
-        </p>
-        <button className="mt-6 px-6 py-3 bg-green-700 text-white rounded-lg shadow-md hover:bg-green-800">
-          Mulai Membaca!
-        </button>
-      </div>
-      <div className="absolute bottom-10 flex justify-center w-full">
-        <Image src="/laptop-mockup.png" alt="Laptop" width={600} height={400} />
-        <Image src="/phone-mockup.png" alt="Phone" width={200} height={400} className="ml-6" />
-      </div>
-    </section>
+    <>
+      <Navbar />
+      <section
+        className={`relative min-h-screen bg-[#90C5AA] overflow-hidden ${poppins.className}`}
+      >
+        {/* Main Hero Content */}
+        <div className="relative flex w-full h-[calc(100vh-72px)]">
+          {/* Device Images */}
+          <div className="relative w-1/2 h-full">
+            <Image
+              src="/Frame 46.svg"
+              alt="devices"
+              width={800}
+              height={800}
+              className="absolute left-29 top-5 drop-shadow-xl"
+            />
+          </div>
+
+          {/* Right Side Content */}
+          <div className="w-1/2 flex flex-col items-end justify-center pr-16 text-right">
+            <h1 className="text-8xl font-extrabold leading-none">
+              <span className="text-[#2A6747] ">Where </span>
+              <span className="text-white">Stories</span> <br />
+              <span className="text-white">Come</span>
+              <span className="text-[#2A6747]">to Life</span>
+            </h1>
+            <p className="text-white text-xl mt-3 font-bold">
+              &quot;Buku Terbaik, Kapan Saja, Di Mana Saja&quot;
+            </p>
+            <button className="mt-6 bg-[#2A6747] text-white px-8 py-3 rounded-lg font-bold text-lg shadow-md hover:bg-[#1E5035] transition-colors">
+              Mulai Membaca!
+            </button>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
