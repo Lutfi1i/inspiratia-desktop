@@ -36,7 +36,7 @@ export default function HeroSection() {
 
           {/* Teks Hero */}
           <div className="w-full md:w-1/2 flex flex-col items-center md:items-end text-center md:text-right">
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
+            <h1 className="text-[90px] font-extrabold leading-tight">
               <span className="text-[#2A6747]">Where </span>
               <span className="text-white">Stories</span> <br />
               <span className="text-white">Come</span>
@@ -53,7 +53,7 @@ export default function HeroSection() {
       </section>
       <div className="relative">
       {/* Features Section */}
-      <section className={`bg-gradient-to-b from-[#90C5AA] to-[#B0D8C4] py-12 md:py-16 px-4 ${poppins.className}`}>
+      <section className={`bg-[#90C5AA] py-12 md:py-16 px-4 ${poppins.className}`}>
         <div className="container mx-auto max-w-6xl">
           {/* Section Title */}
           <h2 className="text-black text-3xl md:text-4xl font-semibold text-center mb-12 md:mb-16">
@@ -69,6 +69,68 @@ export default function HeroSection() {
         </div>
       </section>
       </div>
+
+      <div className="flex flex-col md:flex-row items-center justify-between bg-[#90C5AA] p-12">
+      {/* Left side - Books */}
+      <div className="flex flex-wrap gap-4 max-w-lg mx-10 px-0">
+      <div className="mt-20">
+          <Image 
+        src="/book1c.png" 
+        alt="cancer-ward" 
+        width={160}
+        height={177}
+          />
+        </div>
+        
+        <div className="">
+          <Image 
+            src="/book1a.png" 
+            alt="cancer-ward" 
+            width={220}
+            height={245}
+          />
+        </div>
+        
+        
+        <div className="">
+          <Image 
+            src="/book2b.png" 
+            alt="laserwriter" 
+            width={150}
+            height={222}
+          />
+        </div>
+        
+        <div className="">
+          <Image 
+            src="/bokk4d.png" 
+            alt="Harry Potter" 
+            width={200}
+            height={253}
+          />
+        </div>
+      </div>
+      
+      {/* Right side - Text */}
+      <div className={`md:ml-auto text-right mt-12 md:mt-0 ${poppins.className}`}>
+        <h1 className="text-white text-6xl md:text-8xl font-bold leading-tight drop-shadow-lg">
+          Buku<br />Resmi
+        </h1>
+        
+        <div className="mt-8 space-y-3 text-white text-lg md:text-xl">
+          <p className="font-medium">&quot;Baca di Mana Saja, Kapan Saja&quot;</p>
+          <p className="font-medium">&quot;Buku Resmi, Legal, dan Terpercaya&quot;</p>
+          <p className="font-medium">&quot;Diterjemahkan dengan Akurat dan Profesional&quot;</p>
+          <p className="font-medium">&quot;Akses Buku Favorit Anda dengan Mudah&quot;</p>
+        </div>
+
+        <div className="mt-8">
+        <button className="mt-6 bg-[#2A6747] text-white px-6 py-2 md:px-8 md:py-3 rounded-lg font-bold text-base md:text-lg shadow-md hover:bg-[#1E5035] transition-colors">
+        Lihat Semua buku
+            </button>
+        </div>
+      </div>
+    </div>
     </>
   );
 }
