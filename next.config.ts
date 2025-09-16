@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
     unoptimized: true, // kalau pakai <Image />
   },
   /* config options here */
-    basePath: '/NAMA_REPO',
-    assetPrefix: '/NAMA_REPO/',
+    basePath: '/inspiratia-desktop',
+    assetPrefix: '/inspiratia-desktop/',
 };
 
 export default nextConfig;
